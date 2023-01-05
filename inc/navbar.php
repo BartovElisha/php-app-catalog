@@ -1,4 +1,14 @@
-<header>
+<?php
+
+$search = '';
+
+if (isset($_GET['submit']) && !empty($_GET['search'])) {
+    $search = 'You searched for: ' . $_GET['search'];
+}
+
+?>
+
+<header class="mb-auto">
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">The Catalog</a>
@@ -11,11 +21,13 @@
                         <a class="nav-link active" aria-current="page" href="about.php">About</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
+                <form action="" method="GET" class="d-flex" role="search">
+                    <input name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button name="submit" value="submit" class="btn btn-outline-light" type="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
 </header>
+
+<div class="text-center text-white"><?= $search ?></div>
