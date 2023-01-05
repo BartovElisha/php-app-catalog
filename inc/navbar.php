@@ -12,7 +12,9 @@ if (isset($_GET['submit']) && !empty($_GET['search'])) {
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">The Catalog</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -20,9 +22,13 @@ if (isset($_GET['submit']) && !empty($_GET['search'])) {
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="about.php">About</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="profile.php">Profile</a>
+                    </li>
                 </ul>
                 <form action="" method="GET" class="d-flex" role="search">
-                    <input name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input name="search" class="form-control me-2" type="search" placeholder="Search"
+                           aria-label="Search">
                     <button name="submit" value="submit" class="btn btn-outline-light" type="submit">Search</button>
                 </form>
             </div>
@@ -30,4 +36,6 @@ if (isset($_GET['submit']) && !empty($_GET['search'])) {
     </nav>
 </header>
 
-<div class="text-center text-white"><?= $search ?></div>
+<div class="text-center text-white">
+    <?= $search ?>
+</div>
