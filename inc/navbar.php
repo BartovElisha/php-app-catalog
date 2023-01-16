@@ -25,6 +25,9 @@ if (isset($_GET['submit']) && !empty($_GET['search'])) {
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="profile.php">Profile</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="users.php">Users</a>
+                    </li>
                 </ul>
                 <form action="" method="GET" class="d-flex" role="search">
                     <input name="search" class="form-control me-2" type="search" placeholder="Search"
